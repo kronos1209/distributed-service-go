@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	src := server.NewHTTPServer(":8080")
-	log.Fatal(src.ListenAndServe())
+	src, _ := server.NewGRPCServer(nil)
+	log.Fatal(src)
 }
